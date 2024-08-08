@@ -32,9 +32,13 @@
     * robot_localization package ([https://github.com/cra-ros-pkg/robot_localization/tree/ros2/launch](https://github.com/cra-ros-pkg/robot_localization/tree/ros2/launch))
        
   * Source files to add/modify
-    * launch files (realsense2_camera package)
-      * (added) opensource_tracking_ros2.launch.py
-      * (modified) rs_launch.py 
+    * launch files
+      * realsense2_camera package
+        * (added) launch/opensource_tracking_ros2.launch.py
+        * (modified) launch/rs_launch.py
+    * configuration files
+      * robot_localization package
+        * (modified) params/ukf.yaml    
 
   * Install the ROS2 packages
   * Test
