@@ -106,6 +106,7 @@ def launch_setup(context, params, param_name_suffix=''):
         # see related PR that was merged for humble, iron, rolling: https://github.com/ros2/launch/pull/577
         _output = context.perform_substitution(_output)
 
+    remappings = eval(LaunchConfiguration('remappings').perform(context))
     return [
         launch_ros.actions.Node(
             package='realsense2_camera',
@@ -116,10 +117,12 @@ def launch_setup(context, params, param_name_suffix=''):
             output=_output,
             arguments=['--ros-args', '--log-level', LaunchConfiguration('log_level' + param_name_suffix)],
             emulate_tty=True,
+            remappings = remappings
             )
     ]
 
 def generate_launch_description():
+    
     return LaunchDescription(declare_configurable_parameters(configurable_parameters) + [
         OpaqueFunction(function=launch_setup, kwargs = {'params' : set_configurable_parameters(configurable_parameters)})
     ])
