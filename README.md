@@ -24,7 +24,24 @@
 
 <hr>
 
+## Visual SLAM using realsense in ROS2
+  * Required packages (For imu_filter_madgwick and rtabmap_launch, you can install the binary version of them. Please refer to the corresponding github pages)
+    * realsense2_camera (in this repository)
+    * ![imu_filter_madgwick](https://github.com/CCNYRoboticsLab/imu_tools/tree/humble) 
+    * ![rtabmap_launch](https://github.com/introlab/rtabmap_ros/tree/ros2)
+    * ![robot_localization](https://github.com/cra-ros-pkg/robot_localization/tree/ros2/launch)
+       
+  * Source files to add/modify
+    * launch files (realsense2_camera package)
+      * (added) opensource_tracking_ros2.launch.py
+      * (modified) rs_launch.py 
+
+  * Install the ROS2 packages
+  * Test
+    
 ## Table of contents
+
+  
   * [ROS1 and ROS2 legacy](#ros1-and-ros2-legacy)
   * [Installation on Ubuntu](#installation-on-ubuntu)
   * [Installation on Windows](#installation-on-windows)
