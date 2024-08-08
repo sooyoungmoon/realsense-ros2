@@ -38,8 +38,11 @@
         * (modified) launch/rs_launch.py
     * configuration files
       * robot_localization package
-        * (modified) params/ukf.yaml    
-
+        * (modified) params/ukf.yaml
+          ```bash
+          odom0_pose_rejection_threshold: 10000000.0
+          odom0_twist_rejection_threshold: 10000000.0
+	  ```
   * Install the ROS2 packages
   * Test
     
