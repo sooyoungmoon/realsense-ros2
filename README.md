@@ -27,9 +27,13 @@
 ## Visual SLAM using realsense in ROS2
   * Required packages (For imu_filter_madgwick and rtabmap_launch, you can install the binary version of them. Please refer to the corresponding github pages)
     * realsense2-ros packages (in this repository)
+      * ROS Wrapper for Intel(R) RealSense(TM) Cameras 
     * imu_filter_madgwick package ([https://github.com/CCNYRoboticsLab/imu_tools/tree/humble](https://github.com/CCNYRoboticsLab/imu_tools/tree/humble))
+      * IMU sensor fusion for computation of orientation 
     * rtabmap packages ([https://github.com/introlab/rtabmap_ros/tree/ros2](https://github.com/introlab/rtabmap_ros/tree/ros2))
+      * RGB-D camera based visual SLAM 
     * robot_localization package ([https://github.com/cra-ros-pkg/robot_localization/tree/ros2/launch](https://github.com/cra-ros-pkg/robot_localization/tree/ros2/launch))
+      * Nonlinear state estimation 
        
   * Source files to add/modify
     * launch files
