@@ -62,6 +62,11 @@
           ```
   * Install the ROS2 packages
   * Test
+    * Map 저장
+      ``` 
+      ros2 run nav2_map_server map_saver_cli ~/map
+      ```
+ 
     
 ## Table of contents
 
