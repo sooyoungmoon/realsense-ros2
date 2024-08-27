@@ -40,8 +40,25 @@
       * robot_localization package
         * (modified) params/ukf.yaml
           ```yaml
+          frequency: 300.0
+          base_link_frame: camera_link
+          odom0: rtabmap/odom
+          odom0_config: [true,true,true,
+                        true,true,true,
+                        true,true,true,
+                        true,true,true,
+                        true,true,true]
           odom0_pose_rejection_threshold: 10000000.0
           odom0_twist_rejection_threshold: 10000000.0
+          imu0: imu/data
+          imu0_config: [false, false, false,
+                      true,  true,  true,
+                      true,  true,  true,
+                      true,  true,  true,
+                      true,  true,  true]
+          imu0_differential: true
+          imu0_relative: false
+          use_control: false
           ```
   * Install the ROS2 packages
   * Test
