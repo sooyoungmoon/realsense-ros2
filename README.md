@@ -66,10 +66,25 @@
           ```
   * Install the ROS2 packages
   * Test
+    * 프로그램 실행
+      * ros2_ws로 이동
+        ```
+        cd ~/ros_ws
+        ```
+      * source 명령으로 overlay workspace 환경 로딩
+        ```  
+        source install/setup.bash
+        ```  
+      * opensource_tracking_ros2.launch.py 실행
+        ```  
+        ros2 launch realsense2_camera opensource_tracking_ros2.launch.py
+        ```
     * Map 저장
-      ```
-      ros2 run nav2_map_server map_saver_cli -f ~/map --ros-args --remap map:=/rtabmap/map
-      ```
+      * 새 터미널 실행
+      * nav2_map_server package 내 map_saver_cli 노드 실행
+        ```
+        ros2 run nav2_map_server map_saver_cli -f ~/map --ros-args --remap map:=/rtabmap/map
+        ```
  
     
 ## Table of contents
