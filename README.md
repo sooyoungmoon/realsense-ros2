@@ -67,8 +67,8 @@
   * Install the ROS2 packages
   * Test
     * Map 저장
-      ``` 
-      ros2 run nav2_map_server map_saver_cli ~/map
+      ```
+      ros2 run nav2_map_server map_saver_cli -f ~/map --ros-args --remap map:=/rtabmap/map
       ```
  
     
