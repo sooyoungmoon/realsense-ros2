@@ -64,6 +64,10 @@
           imu0_relative: false
           use_control: false
           ```
+  * Build the ROS2 packages
+    ```bash
+        colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+    ```
   * Install the ROS2 packages
   * Test
     * 프로그램 실행
