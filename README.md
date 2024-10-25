@@ -72,24 +72,31 @@
   * Test
     * 프로그램 실행
       * ros2_ws로 이동
-        ```
+        ```bash
         cd ~/ros_ws
         ```
       * source 명령으로 overlay workspace 환경 로딩
-        ```  
+        ```bash  
         source install/setup.bash
         ```  
       * opensource_tracking_ros2.launch.py 실행
-        ```  
+        ```bash  
         ros2 launch realsense2_camera opensource_tracking_ros2.launch.py
         ```
-    * Map 저장
+    * 2D Map 저장
       * 새 터미널 실행
       * nav2_map_server package 내 map_saver_cli 노드 실행
-        ```
+        ```bash
         ros2 run nav2_map_server map_saver_cli -f ~/map --ros-args --remap map:=/rtabmap/map
         ```
- 
+    * 3D Pointcloud 저장
+      * 새 터미널 실행
+      * pointcloud_to_pcd 노드 실행
+        ```bash
+        ros2 run pcl_ros pointcloud_to_pcd --ros-args --remap input:=/rtabmap/cloud_map
+        ```
+   
+
     
 ## Table of contents
 
